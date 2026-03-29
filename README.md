@@ -193,7 +193,7 @@ uvicorn alert_api:app --host 0.0.0.0 --port 8000
 ```
 
 
----
+
  -  DAG Overview :
    
 `daily_feature_refresh_dag`
@@ -206,7 +206,7 @@ Tasks: `check_pipeline_health` → `send_slack_alert` (conditional)
 `model_score_dag`
 Schedule: `0 4 * * *` (after feature refresh)
 Tasks: `load_latest_features` → `run_fraud_scoring` → `write_scores_to_bq` → `trigger_alerts`
----
+
 
 
  -  Key features computed in PySpark:
